@@ -26,7 +26,7 @@ jobs:
       - name: Run Commands
         run: |
           mongosh "${{ secrets.MONGODB_CONNECTION_STRING }}"
-          load("./github/workspace/src/resources.js")
+          load(./github/workspace/src/resources.js)
 
       - name: Stop MongoDB
         run: |
