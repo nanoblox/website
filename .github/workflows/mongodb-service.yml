@@ -12,7 +12,6 @@ jobs:
       - uses: actions/checkout@v2
 
       - run: |
-      echo Hello World!
-      sudo apt-get install gnupg
-      wget -qO - https://www.mongodb.org/static/pgp/server-5.0.asc
-      sudo apt-key add -
+        echo Hello World!
+        wget -qO - https://www.mongodb.org/static/pgp/server-5.0.asc
+        sudo apt-key add -
