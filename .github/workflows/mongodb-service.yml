@@ -11,6 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - run: |
+      - name: Test
+        run: |
         echo Hello World!
-        echo Hello World!
+        echo Goodbye World!
