@@ -21,6 +21,6 @@ jobs:
           sudo systemctl status mongod
 
           mongosh "${{ secrets.MONGODB_CONNECTION_STRING }}"
-          db.resources.insert({imageUrl: "ImageUrl", title: "Title", description: "Description", resourceUrl: "ResourceUrl"})
+          load("resources.js")
 
           sudo systemctl stop mongod
