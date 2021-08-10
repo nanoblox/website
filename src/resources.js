@@ -1,12 +1,10 @@
-(() => {
-  const resources = db.getCollection("resources");
+const resources = db.getCollection("resources");
 
-  const result = resources.insertOne({
-    imageUrl: "ImageUrl",
-    title: "Title",
-    description: "Description",
-    resourceUrl: "ResourceUrl",
-  });
+const result = resources.insertOne({
+  imageUrl: "ImageUrl",
+  title: "Title",
+  description: "Description",
+  resourceUrl: "ResourceUrl",
+});
 
-  printjson(result);
-})();
+printjson(result);
