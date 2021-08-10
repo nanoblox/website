@@ -19,3 +19,8 @@ jobs:
           sudo apt-get install -y mongodb-org
           sudo systemctl start mongod
           sudo systemctl status mongod
+
+          mongosh "${{ secrets.MONGODB_CONNECTION_STRING }}"
+          db.resources.insert({imageUrl: "ImageUrl", title: "Title", description: "Description", resourceUrl: "ResourceUrl"})
+
+          sudo systemctl stop mongod
