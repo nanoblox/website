@@ -21,6 +21,6 @@ jobs:
           sudo systemctl status mongod
 
           mongosh "${{ secrets.MONGODB_CONNECTION_STRING }}"
-          load("./src/resources.js")
+          load("/src/resources.js")
 
           sudo systemctl stop mongod
