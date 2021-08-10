@@ -13,5 +13,5 @@ jobs:
 
       - name: Test
         run: |
-        echo Hello World!
-        echo Goodbye World!
+          echo Hello World!
+          echo Goodbye World!
