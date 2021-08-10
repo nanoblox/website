@@ -23,11 +23,10 @@ jobs:
           sudo systemctl start mongod
           sudo systemctl status mongod
 
-      - uses: ./src@main
       - name: Run Commands
         run: |
           mongosh "${{ secrets.MONGODB_CONNECTION_STRING }}"
-          load("./resources.js")
+          load("/github/workspace/src/resources.js")
 
       - name: Stop MongoDB
         run: |
