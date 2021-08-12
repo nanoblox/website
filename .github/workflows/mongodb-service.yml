@@ -11,23 +11,19 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Download and Install MongoDB
+      - name: Download and Install MongoDB Shell
         run: |
-          wget -qO - https://www.mongodb.org/static/pgp/server-5.0.asc | sudo apt-key add -
-          echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-5.0.list
-          sudo apt-get update
-          sudo apt-get install -y mongodb-org
+          wget https://downloads.mongodb.com/compass/mongodb-mongosh_1.0.5_amd64.deb
+          sudo dpkg -i mongodb-mongosh_1.0.5_amd64.deb
 
       - name: Start MongoDB
         run: |
-          sudo systemctl start mongod
-          sudo systemctl status mongod
+          mongosh "${{ secrets.MONGODB_CONNECTION_STRING }}"
 
       - name: Run Script
         run: |
-          mongosh "${{ secrets.MONGODB_CONNECTION_STRING }}"
-          load('./github/workspace/src/resources.js')
+          db.resources.count()
 
       - name: Stop MongoDB
         run: |
-          sudo systemctl stop mongod
+          quit
