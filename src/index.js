@@ -1,4 +1,4 @@
-const resources = require("./resources.json")
+const resourcesData = require("./resources.json")
 const MongoDB = require("mongodb")
 
 require("dotenv").config()
@@ -12,8 +12,11 @@ async function run() {
         const database = client.db("Nanoblox")
         const resources = database.collection("resources")
 
-        const count = await resources.countDocuments()
-        console.log(count)
+        const deletedResponse = await resources.deleteMany({})
+        console.log(deletedResponse)
+
+        const insertedResponse = await resources.insertMany(resourcesData)
+        console.log(insertedResponse)
     } finally {
         await client.close()
     }

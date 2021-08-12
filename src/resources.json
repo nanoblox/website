@@ -3,12 +3,56 @@
     "imageUrl": "",
     "title": "Tutorials",
     "description": "Learn more from getting started with Nanoblox, to creating and giving roles, to executing commands with our collection of video tutorials.",
-    "resourceUrl": "#"
+    "resourceUrl": "https://www.youtube.com/channel/UCzb7ReB_bR3Hv4TG5hg-DlA",
+    "resourceLinkText": "Learn more"
   },
   {
     "imageUrl": "",
-    "title": "Tutorials",
-    "description": "Learn more from getting started with Nanoblox, to creating and giving roles, to executing commands with our collection of video tutorials.",
-    "resourceUrl": "#"
+    "title": "Discussion",
+    "description": "Have any questions, feedback or suggestions? Feel free to join the discussion at our DevForum thread.",
+    "resourceUrl": "https://devforum.roblox.com/t/test-thread-nanoblox/1155276/3",
+    "resourceLinkText": "Visit"
+  },
+  {
+    "imageUrl": "",
+    "title": "Updates",
+    "description": "For the latest insights and updates on commands and features you can follow @NanobIox on Twitter.",
+    "resourceUrl": "https://twitter.com/NanobIox",
+    "resourceLinkText": "Follow"
+  },
+  {
+    "imageUrl": "",
+    "title": "Earn",
+    "description": "Developers are earning beyond $100,000 USD a year directly with Nanoblox. Learn more about the resources Nanoblox provides, such as sellable roles, to unlock your monetisation potential.",
+    "resourceUrl": "https://nanoblox.github.io/core/",
+    "resourceLinkText": "Learn more"
+  },
+  {
+    "imageUrl": "",
+    "title": "GitHub",
+    "description": "Nanoblox is powered by completely open-source code. Visit our GitHub to view its repositories, file issues, make contributions and more.",
+    "resourceUrl": "https://github.com/nanoblox",
+    "resourceLinkText": "Visit"
+  },
+  {
+    "imageUrl": "",
+    "title": "Creating a Command",
+    "description": "Wherever you aspire to publish commands yourself, or are curious to see how your favourite commands are made, we have dedicated resources and guides to help you out.",
+    "resourceUrl": "https://nanoblox.github.io/core/",
+    "resourceLinkText": "Learn more"
+  },
+  {
+    "imageUrl": "",
+    "title": "Changelog",
+    "description": "Updates to the API and internal changes to the Core (commonly known as the ‘MainModule’) are posted to our developer changelog.",
+    "resourceUrl": "https://nanoblox.github.io/core/",
+    "resourceLinkText": "Visit"
+  },
+  {
+    "imageUrl": "",
+    "title": "Documentation",
+    "description": "The docs provide details on internal services and modules which developers can leverage for customisations and abilities the interface may not traditionally provide.",
+    "resourceUrl": "https://nanoblox.github.io/core/",
+    "resourceLinkText": "Visit"
   }
 ]
