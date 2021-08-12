@@ -36,7 +36,9 @@ async function run() {
     const { value: redisUri } = configData;
 
     const redisClient = redis.createClient(redisUri);
-    redisClient.del("resources");
+    redisClient.del("resources", (error, response) =>
+      console.log(error, response)
+    );
     redisClient.quit();
   } finally {
     await mongoDBClient.close();
