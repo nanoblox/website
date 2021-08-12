@@ -12,7 +12,7 @@ async function run() {
         const database = client.db("Nanoblox")
         const resources = database.collection("resources")
 
-        const count = resources.countDocuments()
+        const count = await resources.countDocuments()
         console.log(count)
     } finally {
         await client.close()
