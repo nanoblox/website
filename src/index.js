@@ -1,7 +1,6 @@
 const resourcesData = require("./resources.json");
 const MongoDB = require("mongodb");
 const redis = require("redis");
-const fetch = require("fetch");
 
 require("dotenv").config();
 
