@@ -37,7 +37,6 @@ async function run() {
 
     const redisClient = redis.createClient(redisUri);
     redisClient.del("resources", (error, response) => {
-      console.log(error, response);
       redisClient.quit();
     });
   } finally {
