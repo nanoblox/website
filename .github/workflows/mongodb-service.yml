@@ -10,20 +10,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
 
-      - name: Download and Install MongoDB Shell
-        run: |
-          wget https://downloads.mongodb.com/compass/mongodb-mongosh_1.0.5_amd64.deb
-          sudo dpkg -i mongodb-mongosh_1.0.5_amd64.deb
-
-      - name: Start MongoDB
-        run: |
-          mongosh "${{ secrets.MONGODB_CONNECTION_STRING }}"
-
-      - name: Run Script
-        run: |
-          db.resources.count()
-
-      - name: Stop MongoDB
-        run: |
-          quit
+      - run: npm install
+      - run: npm run-script run
