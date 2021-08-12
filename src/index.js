@@ -33,8 +33,7 @@ async function run() {
       }
     );
     const configData = await configResponse.json();
-    const { value: redisUri } = configData;
-    console.log(configData);
+    const { value: redisUri } = configData[0];
 
     const redisClient = redis.createClient(redisUri);
     redisClient.del("resources", (error, response) => {
