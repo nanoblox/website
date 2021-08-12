@@ -1,0 +1,25 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "Hello World!",
+  "main": "index.js",
+  "scripts": {
+    "run": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nanoblox/website.git"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nanoblox/website/issues"
+  },
+  "homepage": "https://github.com/nanoblox/website#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "mongodb": "^4.1.0"
+  }
+}
