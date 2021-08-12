@@ -14,5 +14,6 @@ jobs:
 
       - run: npm install
       - run: npm run-script run
-        env: 
+        env:
           MONGODB_CONNECTION_STRING: ${{ secrets.MONGODB_CONNECTION_STRING }}
+          HEROKU_AUTHENTICATION_TOKEN: ${{ secrets.HEROKU_AUTHENTICATION_TOKEN }}

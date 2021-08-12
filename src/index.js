@@ -1,25 +1,45 @@
-const resourcesData = require("./resources.json")
-const MongoDB = require("mongodb")
+const resourcesData = require("./resources.json");
+const MongoDB = require("mongodb");
+const redis = require("redis");
 
-require("dotenv").config()
+require("dotenv").config();
 
-const client = new MongoDB.MongoClient(process.env.MONGODB_CONNECTION_STRING)
+const mongoDBClient = new MongoDB.MongoClient(
+  process.env.MONGODB_CONNECTION_STRING
+);
 
 async function run() {
-    try {
-        await client.connect()
+  try {
+    await mongoDBClient.connect();
 
-        const database = client.db("Nanoblox")
-        const resources = database.collection("resources")
+    const database = mongoDBClient.db("Nanoblox");
+    const resources = database.collection("resources");
 
-        const deletedResponse = await resources.deleteMany({})
-        console.log(deletedResponse)
+    const deletedResponse = await resources.deleteMany({});
+    console.log(deletedResponse);
 
-        const insertedResponse = await resources.insertMany(resourcesData)
-        console.log(insertedResponse)
-    } finally {
-        await client.close()
-    }
+    const insertedResponse = await resources.insertMany(resourcesData);
+    console.log(insertedResponse);
+
+    const configResponse = await fetch(
+      "https://api.heroku.com/addons/redis-acute-17192/config",
+      {
+        method: "GET",
+        headers: {
+          Accept: "application/vnd.heroku+json; version=3",
+          Authorization: `Bearer ${process.env.HEROKU_AUTHENTICATION_TOKEN}`,
+        },
+      }
+    );
+    const configData = await configResponse.json();
+    const { value: redisUri } = configData;
+
+    const redisClient = redis.createClient(redisUri);
+    redisClient.del("resources");
+  } finally {
+    await mongoDBClient.close();
+    await redisClient.quit();
+  }
 }
 
-run().catch(console.dir)
+run().catch(console.dir);
