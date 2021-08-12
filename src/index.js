@@ -36,9 +36,9 @@ async function run() {
 
     const redisClient = redis.createClient(redisUri);
     redisClient.del("resources");
+    redisClient.quit();
   } finally {
     await mongoDBClient.close();
-    await redisClient.quit();
   }
 }
 
