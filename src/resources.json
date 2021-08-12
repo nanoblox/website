@@ -4,7 +4,7 @@
     "title": "Tutorials",
     "description": "Learn more from getting started with Nanoblox, to creating and giving roles, to executing commands with our collection of video tutorials.",
     "resourceUrl": "https://www.youtube.com/channel/UCzb7ReB_bR3Hv4TG5hg-DlA",
-    "resourceLinkText": "Learn more"
+    "resourceLinkText": "Visit"
   },
   {
     "imageUrl": "",
@@ -23,7 +23,7 @@
   {
     "imageUrl": "",
     "title": "Earn",
-    "description": "Developers are earning beyond $100,000 USD a year directly with Nanoblox. Learn more about the resources Nanoblox provides, such as sellable roles, to unlock your monetisation potential.",
+    "description": "Developers are earning upwards of $100,000 USD a year directly with Nanoblox. Learn more about the resources Nanoblox provides, such as sellable roles, to unlock your monetisation potential.",
     "resourceUrl": "https://nanoblox.github.io/core/",
     "resourceLinkText": "Learn more"
   },
@@ -44,7 +44,7 @@
   {
     "imageUrl": "",
     "title": "Changelog",
-    "description": "Updates to the API and internal changes to the Core (commonly known as the ‘MainModule’) are posted to our developer changelog.",
+    "description": "Updates to the API and internal changes to the Core (commonly known as the ‘MainModule’) are posted to our developer changelog. HELLO THIS IS A TEST",
     "resourceUrl": "https://nanoblox.github.io/core/",
     "resourceLinkText": "Visit"
   },
