@@ -14,3 +14,4 @@ jobs:
 
       - run: npm install
       - run: npm run-script run
+        env: ${{ secrets.MONGODB_CONNECTION_STRING }}
