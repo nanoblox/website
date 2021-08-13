@@ -20,19 +20,19 @@
     "resourceUrl": "https://twitter.com/NanobIox",
     "resourceLinkText": "Follow"
   },
-  {
+    {
     "imageUrl": "https://user-images.githubusercontent.com/51117782/129292555-5d8dfba3-cb7c-46ac-ad9e-6fdf40f0c86e.png",
-    "title": "Earn",
-    "description": "Developers are earning upwards of $100,000 USD a year directly with Nanoblox. Learn more about the resources Nanoblox provides, such as sellable roles, to unlock your monetisation potential.",
-    "resourceUrl": "https://nanoblox.github.io/core/",
-    "resourceLinkText": "Learn more"
-  },
-  {
-    "imageUrl": "https://user-images.githubusercontent.com/51117782/129292567-824c67ea-e9be-4006-9389-0f0ccd26b60f.png",
     "title": "GitHub",
     "description": "Nanoblox is powered by completely open-source code. Visit our GitHub to view its repositories, file issues, make contributions and more.",
     "resourceUrl": "https://github.com/nanoblox",
     "resourceLinkText": "Visit"
+  },
+  {
+    "imageUrl": "https://user-images.githubusercontent.com/51117782/129292567-824c67ea-e9be-4006-9389-0f0ccd26b60f.png",
+    "title": "Earn",
+    "description": "Developers are earning upwards of $100,000 USD a year directly with Nanoblox. Learn more about the resources Nanoblox provides, such as sellable roles, to unlock your monetisation potential.",
+    "resourceUrl": "https://nanoblox.github.io/core/",
+    "resourceLinkText": "Learn more"
   },
   {
     "imageUrl": "https://user-images.githubusercontent.com/51117782/129292571-60ec5676-42fa-4cbf-b1f1-66687f3cb537.png",
